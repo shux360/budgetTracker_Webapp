@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body >
+  
+  <div class="bg-white ">
+      <header class="absolute inset-x-0 top-0 z-50">
+        
+          <nav class=" flex items-center justify-between p-6 lg:px-8 " aria-label="Global">
+              <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1.5">
+                  <span class="sr-only">Your Company</span>
+                  <img class="h-8 w-auto" src="images/img_2.png" alt="CoinSync">
+                </a>
+              </div>
+             
+                <div class="hidden lg:flex lg:gap-x-12">
+                    <a href="index.html" class="text1 block rounded-md px-3 py-2 text-base font-medium" style="text-decoration:none;transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='rgb(49, 60, 77)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255,0)'">Home</a>
+                    <a href="contact.html" class="text1 block rounded-md px-3 py-2 text-base font-medium" style="text-decoration:none;transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='rgb(49, 60, 77)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255,0)'">Contact Us</a>
+                    <a href="aboutus.html" class="text1 block rounded-md px-3 py-2 text-base font-medium" style="text-decoration:none;transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='rgb(49, 60, 77)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255,0)'">About Us</a>
+                    <a href="pricing.html" class="text1 block rounded-md px-3 py-2 text-base font-medium" style="text-decoration:none;transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='rgb(49, 60, 77)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255,0)'">Pricing</a>
+                    <a href="dashboard.html" class="text1 block rounded-md px-3 py-2 text-base font-medium" style="text-decoration:none;transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='rgb(49, 60, 77)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255,0)'"">Dashboard</a>
+                    <a href="logpage.html" class="text1 block rounded-md px-3 py-2 text-base font-medium" style="text-decoration:none;transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='rgb(49, 60, 77)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255,0)'">Log In</a>
+                </div>
+              <div class="hidden lg:flex lg:flex-1 lg:justify-end"></div>
+             
+              
+        
+          <!-- Mobile menu, show/hide based on menu open state. -->
+          <div class="hidden lg:hidden sm:flex sm:gap-x-12">
+            <a href="index.html" class="text1 rounded-md px-3 py-2 text-base font-medium" style="text-decoration:none;transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='rgb(49, 60, 77)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255,0)'">Home</a>
+            <a href="contact.html" class="text1 block rounded-md px-3 py-2 text-base font-medium" style="text-decoration:none;transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='rgb(49, 60, 77)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255,0)'">Contact Us</a>
+            <a href="aboutus.html" class="text1 block rounded-md px-3 py-2 text-base font-medium" style="text-decoration:none;transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='rgb(49, 60, 77)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255,0)'">About Us</a>
+            <a href="pricing.html" class="text1 block rounded-md px-3 py-2 text-base font-medium" style="text-decoration:none;transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='rgb(49, 60, 77)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255,0)'">Pricing</a>
+            <a href="dashboard.html" class="text1 block rounded-md px-3 py-2 text-base font-medium" style="text-decoration:none;transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='rgb(49, 60, 77)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255,0)'">Dashboard</a>
+            <a href="logpage.html" class="text1 block rounded-md px-3 py-2 text-base font-medium" style="text-decoration:none;transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='rgb(49, 60, 77)'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255,0)'">Log In</a>
+        </div>
+      </nav>
+      </header>
+  </div>
+        
+        <br>
+
+    
+    <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]" aria-hidden="true">
+      <div class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+    <div class="absolute inset-x-10 bottom-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:bottom-[-20rem]" aria-hidden="true">
+      <div class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+    <div class="mx-auto max-w-2xl text-center">
+      <h3 class="text-3xl mt-20 font-bold tracking-tight text-gray-900 sm:text-4xl">Sign Up</h3>
+      <br>  
+    </div>
+    <form action="#" method="POST" class="mx-auto mt-2 max-w-xl sm:mt-20">
+      <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+        <div>
+          <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">First name</label>
+          <div class="mt-2.5">
+            <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-1 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+        <div>
+          <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-900">Last name</label>
+          <div class="mt-2.5">
+            <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-1 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm sm:leading-6">
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Country</label>
+          <div class="mt-2.5">
+            <input type="text" name="country" id="country" autocomplete="country" class="block w-full rounded-md border-1 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm sm:leading-6">
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email</label>
+          <div class="mt-2.5">
+            <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-1 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  sm:text-sm sm:leading-6">
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="phone-number" class="block text-sm font-semibold leading-6 text-gray-900" placeholder="phone">Phone number</label>
+          <div class="relative mt-2.5 ">
+              <div class="absolute inset-y-0 left-0 flex items-center">
+                  <label for="country-code" class="sr-only">Country Code</label>
+                  <select id="country-code" name="country-code" class="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-2 pr- text-gray-400 sm:text-sm" >
+                      <option value=" ">SL-(+94)</option>
+                      <option value=" ">IND-(+91)</option>
+                      <option value=" ">AUS-(+61)</option>
+                  </select>
+              </div>
+              <div class="flex gap-x-1 sm:col-span-2">
+              <input   class="block rounded-md border-1 px-1 py-2 pl-2 text-gray-900 shadow-sm placeholder:text-gray-400  sm:text-sm sm:leading-6" style="width: 87px;"  >
+              <input  class="block rounded-md border-1 px-1 py-2 pl-2 text-gray-900 shadow-sm placeholder:text-gray-400  sm:text-sm sm:leading-6"style="width: 485px;" >
+          </div>
+        </div>
+      </div>
+        <div class="sm:col-span-2">
+          
+        
+        <div class="flex gap-x-4 sm:col-span-2">
+          
+
+        <div class="check-box">
+            <input type="checkbox">
+        </div>
+          <label class="text-sm leading-6 text-gray-600" id="switch-1-label">
+            By selecting this, you agree to our
+            <a href="#" class="text font-semibold">privacy&nbsp;policy</a>.
+          </label>
+        </div>
+      </div>
+      <div class="mt-10 mb-5 flex  gap-x-6">
+        <button type="submit" class="items-center justify-center block w-full rounded-md   px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm  focus-visible:outline "style="text-decoration:none;background-color:  rgb(31 41 55);transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='rgb(49, 60, 77)'" onmouseout="this.style.backgroundColor='rgb(31 41 55)'">Submit</button>
+      </div>
+    </form>
+    </div>
+  </div>
+
+  <script>
+    function handleFormSubmit(event) {
+        event.preventDefault(); 
+
+        const firstName = document.getElementById('first-name').value;
+        const lastName = document.getElementById('last-name').value;
+        const email = document.getElementById('email').value;
+      
+        localStorage.setItem('firstName', firstName);
+        localStorage.setItem('lastName', lastName);
+        localStorage.setItem('email', email);
+    }   
+    const form = document.querySelector('form');
+    form.addEventListener('submit', handleFormSubmit);
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const countryCodeSelect = document.getElementById('country-code');
+    const phoneNumberInput = document.getElementById('phone-number');
+
+    countryCodeSelect.addEventListener('change', function () {
+        const selectedCountryCode = countryCodeSelect.value;
+        phoneNumberInput.value = selectedCountryCode; // Set the value of the input to the selected country code
+        phoneNumberInput.focus(); // Focus on the phone number input after selecting the country code
+    });
+});
+</script>
+  
+  <footer class="text-center text-lg-start text-white bg-black">
+  
+    <section class="">
+      <div class="container text-center text-md-start">
+        <!-- Grid row -->
+        <div class="row mt-2">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-5 mt-5">
+            <!-- Content -->
+            <h3 class=" font-bold tracking-tight text-white ">CoinSync</h3>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #444444; height: 2px"
+                />
+            <p>
+              Embark on a financial journey with CoinSync, your companion in smart money management. Seamlessly track expenses and chase your dreams, one coin at a time.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-5 mt-5">
+            <!-- Links -->
+            <h3 class="font-bold tracking-tight text-white ">Section</h3>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #444444; height: 2px"
+                />
+            <p>
+              <a href="index.html" class="text-white">Home</a>
+            </p>
+            <p>
+              <a href="aboutus.html" class="text-white">About Us</a>
+            </p>
+            <p>
+              <a href="pricing.html" class="text-white">Pricing</a>
+            </p>
+            <p>
+              <a href="logpage.html" class="text-white">Log In</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-5 mt-5">
+            <!-- Links -->
+            <h3 class="font-bold tracking-tight text-white ">Contact</h3>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #444444; height: 2px"
+                />
+            <p><i class="fas fa-home mr-3"></i> Hapugala,Galle Road,Sri Lanka</p>
+            <p><i class="fas fa-envelope mr-3"></i> coinsync@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> +94711234567</p>
+            <p><i class="fas fa-print mr-3"></i> +94771234567</p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-5 mt-5">
+            <!-- Links -->
+            <h3 class="font-bold tracking-tight text-white ">Follow us on</h3>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto"style="width: 60px; background-color: #444444; height: 2px"/>
+            
+            <div class="body01">
+              <div class='social-links'>
+                <li class="flex gap-x-3"><div class='social-btn flex-center' id="twitter" onclick="redirectTo('https://twitter.com')">
+                  <svg xmlns="http://www.twitter.com" width="24" height="24" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg><span>CoinSync</span>
+                </div></li></div>
+                <li class="flex gap-x-3"><div class='social-btn flex-center' id="linkedin" onclick="redirectTo('https://linkedin.com')">
+                  <svg xmlns="http://www.linkedin.com" width="24" height="24" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg><span>CoinSync</span>
+                </div></li></div>
+                <li class="flex gap-x-3"><div class='social-btn flex-center' id="github" onclick="redirectTo('https://github.com')">
+                  <svg xmlns="http://www.github.com" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg><span>CoinSync</span>
+                </div></li></div>
+              </div>
+              <script>
+                function redirectTo(url) {
+                  window.open(url, '_blank');
+                }
+              </script>
+            </div>
+          </div>  
+        </div>
+          
+      </div>
+    </section>
+    <div class="text-center p-3 " style="background-color: rgba(83, 83, 83, 0.692); width: 100%;">
+      © 2023 Company,Inc. All rights reserverd.
+      <a class="text-white" href="https://coinsync.com/">CoinSync.com</a>
+    </div>
+    
+</footer>
+</body>
+</html>

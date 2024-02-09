@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="h-screen flex">
+  <style>
+    a{
+      text-decoration: none;
+    }
+  </style>
+  <div class="section1 animate__animated animate__fadeInLeft ">
+  <section class="bg-gray-800 pt-4 h-full" style="width:270px;height:120vh; padding-top: 5px; align-items: start; ">
+    <div class="mx-auto max-w-7xl px-4 sm:px-0 lg:px-2">
+      <div class="flex flex-col h-full items-baseline justify-items-start">
+        <div class="flex items-center">
+          <div class="border-t border-gray-700 pb-3 pt-4"style="padding-top: 10px;" >
+            <div class="flex items-start px-0 mt-3">
+              <button type="button" class="-mt-1.5 rounded-full  bg-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true" onclick="navigateToPage()">   
+                <span class="sr-only">Open user menu</span>
+                <i class='bx bx-user bx-border-circle bx-tada-hover bx-md'></i> 
+              </button>
+              <script>
+                function navigateToPage() {
+                    // Replace 'your_destination_page.html' with the actual URL of the page you want to navigate to
+                    window.location.href = 'userprofile.html';
+                }
+            </script>
+              <div class="ml-3 mt-0 ">
+                <div id="usernameDisplay"class="-mt-1 text-base font-medium leading-none text-white"></div>
+                <div id="emailDisplay"class="text-sm font-medium leading-none text-gray-400" ></div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+            
+        <div class="flex-1 overflow-y-auto ">
+          <div class="hidden md:block space-y-1 px-2 pb-3 pt-2 sm:px-3 ">
+            <nav class="ml-10 flex items-baseline space-x-4" >
+              <ul><!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <li><a href="dashboard.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Dashboard</a></li>
+                <li><a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Home</a></li>
+                <li><a href="report.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Reports</a></li>
+                <li><a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendar</a></li>
+                <li><a href="userprofile.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Your Profile</a></li>
+                <div>
+                <button type="button" id="sign-out-button">
+                  <li><a href="signout.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Sign out</a></li>
+                </button>
+                <button id="deactivateButton" type="button" class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">Deactivate</button>
+
+                <!-- Add a script tag to handle the button click event -->
+                <script>
+                  document.getElementById('deactivateButton').addEventListener('click', function() {
+                    // Perform any necessary actions before redirecting (e.g., deactivation logic)
+                    // Redirect to the desired page (replace 'new-page.html' with your actual page URL)
+                    window.location.href = 'signout.html';
+                  });
+                </script>
+              </div>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="md:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="dashboard.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
+        <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Home</a>
+        <a href="report.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Reports</a>
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+        <a href="userprofile.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Your Profile</a>
+        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Sign out</a>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <div class="flex-111">
+    <!-- Your existing header for the main content -->
+    <header class="bg-white shadow">
+      <div class="mx-auto max-w-7xl px-0 py-6 sm:px-6 lg:px-0">
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
+      </div>
+    </header>
+
+    <!-- Your main content area -->
+    <main>
+      <div class="grid-container">
+        <div class="box">
+          <header class="py-2">Expense Distribution</header>
+          <section id="chart_1" class="flex items-center justify-center mt-1">
+            <canvas id="myChart"  style="width: 500px;height: 300px;"></canvas>
+            <script>
+              // Your graph data
+              var data = {
+                labels: ["January", "February", "March", "April", "May","June","July","August","September","October","November","December"],
+                datasets: [{
+                  label: "Money spent",
+                  backgroundColor: [
+                    'rgba(255, 99, 132, 0.4)',
+                    'rgba(255, 159, 64, 0.4)',
+                    'rgba(255, 205, 86, 0.4)',
+                    'rgba(75, 192, 192, 0.4)',
+                    'rgba(54, 162, 235, 0.4)',
+                    'rgba(153, 102, 255, 0.4)',
+                    'rgba(201, 203, 207, 0.4)'
+                  ],
+                  borderColor: "rgba(85,192,192,1)",
+                  data: [19840, 24650, 22900, 17680, 23500,20000,20840,21650,18000,21600,25400,30620]
+                }]
+              };
+              // Chart configuration
+              var options = {
+                responsive: false,
+                maintainAspectRatio: false,
+              };
+          
+              // Get the context of the canvas element
+              var ctx = document.getElementById("myChart").getContext("2d");
+          
+              // Create the chart
+              var myChart = new Chart(ctx, {
+                type: 'bar', // You can change the type to line, pie, etc.
+                data: data,
+                options: options
+              });
+            </script>
+          </section>
+        </div>
+      
+        <div class="box">
+          <header class="py-2">Income Distribution</header>
+          <section id="chart_2" class="flex items-center justify-center mt-1">
+            <canvas id="myChart2"  style="width: 500px;height: 300px;"></canvas>
+            <script>
+              // Your graph data
+              var data = {
+                labels: ["January", "February", "March", "April", "May","June","July","August","September","October","November","December"],
+                datasets: [{
+                  label: "Gained money",
+                  backgroundColor: [
+                    'rgba(255, 99, 132, 0.4)',
+                    'rgba(255, 159, 64, 0.4)',
+                    'rgba(255, 205, 86, 0.4)',
+                    'rgba(75, 192, 192, 0.4)',
+                    'rgba(54, 162, 235, 0.4)',
+                    'rgba(153, 102, 255, 0.4)',
+                    'rgba(201, 203, 207, 0.4)'
+                  ],
+                  
+                  data: [51000, 50000, 50000, 52000, 50000,53000,50000,51000,50000,50000,54000,50000]
+                }]
+              };
+              // Chart configuration
+              var options = {
+                responsive: false,
+                maintainAspectRatio: false,
+              };
+          
+              // Get the context of the canvas element
+              var ctx = document.getElementById("myChart2").getContext("2d");
+          
+              // Create the chart
+              var myChart = new Chart(ctx, {
+                type: 'pie', // You can change the type to line, pie, etc.
+                data: data,
+                options: options
+              });
+  
+            const firstName = localStorage.getItem('firstName');
+            const lastName = localStorage.getItem('lastName');
+            const email = localStorage.getItem('email');
+
+            document.getElementById('usernameDisplay').textContent = `${firstName} ${lastName}`;
+            document.getElementById('emailDisplay').textContent = email;
+
+            </script>
+          </section>
+        </div>
+        <div class="box">
+          <header class="py-2">Saving Progress</header>
+          <section id="chart_3" class="flex items-center justify-center mt-1">
+            <canvas id="myChart3"  style="width: 500px;height: 300px;"></canvas>
+            <script>
+              // Your graph data
+              var data = {
+                labels: ["January", "February", "March", "April", "May","June","July","August","September","October","November","December"],
+                datasets: [{
+                  label: "Amount saved",
+                  borderColor:'rgba(252, 67, 50,0.4)',
+                  backgroundColor: [
+                    'rgba(255, 143, 133,0.4)'
+                  ],
+                 
+                  data: [31160, 25350, 27100, 34320, 26500,30000,29160,28350,32000,28400,28600,19380],
+                }]
+              };
+              // Chart configuration
+              var options = {
+                responsive: false,
+                maintainAspectRatio: false,
+              };
+          
+              // Get the context of the canvas element
+              var ctx = document.getElementById("myChart3").getContext("2d");
+          
+              // Create the chart
+              var myChart = new Chart(ctx, {
+                type: 'line', // You can change the type to line, pie, etc.
+                data: data,
+                options: options
+              });
+            </script>
+          </section>
+        </div>  
+        <div class="box">
+          <header class="py-2">Expense Categories</header>
+          <section id="chart_4" class="flex items-center justify-center mt-1">
+            <canvas id="myChart4"  style="width: 500px;height: 300px;"></canvas>
+            <script>
+              // Your graph data
+              var data = {
+                labels: ["Food","Transport","Beauty","Education","Entertainment","Health","Clothing","Other"],
+                datasets: [{
+                  label: "Expenses in last month (December)",
+                  backgroundColor: [
+                    'rgba(255, 99, 132, 0.4)',
+                    'rgba(255, 159, 64, 0.4)',
+                    'rgba(255, 205, 86, 0.4)',
+                    'rgba(75, 192, 192, 0.4)',
+                    'rgba(54, 162, 235, 0.4)',
+                    'rgba(153, 102, 255, 0.4)',
+                    'rgba(201, 203, 207, 0.4)'
+                  ],
+                  borderColor: "rgba(85,192,192,1)",
+                  data: [1500, 2500, 4600, 9400, 2800,6500,1520,1800],
+                }]
+              };
+              // Chart configuration
+              var options = {
+                responsive: false,
+                maintainAspectRatio: false,
+              };
+          
+              // Get the context of the canvas element
+              var ctx = document.getElementById("myChart4").getContext("2d");
+          
+              // Create the chart
+              var myChart = new Chart(ctx, {
+                type: 'bar', // You can change the type to line, pie, etc.
+                data: data,
+                options: options
+              });
+            </script>
+          </section>
+        </div>
+        <br>
+      </div>
+      <br>
+      <br>
+    </main>
+  </div>
+  
+</body>
+</html>

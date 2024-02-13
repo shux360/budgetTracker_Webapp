@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,600&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 50;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+        
+    </style>
+
+</head>
+<body>
+  <div class="fixed-nav animate__animated animate__fadeInDown">
+  <nav class="bg-gray-800">
+    <div class="mx-4 px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hoverfocus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                    <!--
+                    Icon when menu is closed.
+
+                    Menu open: "hidden", Menu closed: "block"
+                    -->
+                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <!--
+                Icon when menu is open.
+
+                Menu open: "block", Menu closed: "hidden"
+                -->
+                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+            <div class="flex flex-shrink-0 items-center">
+                <img class="h-8 w-auto" src="images/img_2.png" alt="CoinSync">
+            </div>
+            <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                    <!-- Current: "bg-gray-900 text-black", Default: "text-gray-300 hover:bg-gray-700 hover text-black" -->
+                    <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"style="text-decoration:none;">Home</a>
+                    <a href="contact.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page"style="text-decoration:none;">Contact Us</a>
+                    <a href="aboutus.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"style="text-decoration:none;">About Us</a>
+                    <a href="pricing.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"style="text-decoration:none;">Pricing</a>
+                    <a href="dashboard.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"style="text-decoration:none;">Dashboard</a>
+                    <a href="logpage.html" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"style="text-decoration:none;">LogIn</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <button type="button" class="rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true" onclick="showNotification()">
+            <i class='bx bx-bell bx-border-circle bx-tada-hover bx-sm' style='color:#000000'></i>
+            <span class="sr-only">View notifications</span>
+            
+          </button>
+        
+          <script>
+            function showNotification() {
+                // Dummy values for notification
+                const title = "New Notification";
+                const message = "You have no notification to show.";
+        
+                // Create a notification element
+                const notificationElement = document.createElement('div');
+                notificationElement.className = 'notification-box';
+                notificationElement.innerHTML = `
+                    <h6>${title}</h6>
+                    <p>${message}</p>
+                `;
+        
+                // Append the notification element to the body
+                document.body.appendChild(notificationElement);
+        
+                // Optional: Set a timeout to remove the notification after a certain duration
+                setTimeout(() => {
+                    document.body.removeChild(notificationElement);
+                }, 3000); // Remove after 5 seconds (adjust the duration as needed)
+            }
+          </script>
+      
+
+
+            <!-- Profile dropdown -->
+            <div class="relative ml-3">
+              <div>
+                <button type="button" class="rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true" onclick="navigateToPage()">
+                  <i class='bx bx-user bx-border-circle bx-tada-hover bx-sm' style='color:#000000'></i> 
+                  <span class="sr-only">Open user menu</span>
+                  
+                </button>
+              </div>
+            
+              <script>
+                  function navigateToPage() {
+                      // Replace 'your_destination_page.html' with the actual URL of the page you want to navigate to
+                      window.location.href = 'userprofile.html';
+                  }
+              </script>
+           
+            </div>
+        </div>
+      </div>
+    </div>
+        
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"style="text-decoration:none;">Home</a>
+        <a href="contact.html" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page"style="text-decoration:none;">Contact Us</a>
+        <a href="pricing.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"style="text-decoration:none;">Pricing</a>
+        <a href="dashboard.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"style="text-decoration:none;">Dashboard</a>
+        <a href="logpage.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"style="text-decoration:none;">LogIn</a>
+        </div>
+    </div>
+</nav>
+</div>  
+ 
+    
+<div class="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32" style="background-color: rgb(16, 22, 35);">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8 ">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2 ">
+      <div class="max-w-xl lg:max-w-lg animate__animated animate__fadeIn animate-slow">
+        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Subscribe to our newsletter.</h2>
+        <p class="mt-4 text-lg leading-8 text-gray-300">Stay updated with exclusive offers and news. Subscribe to our newsletter for the latest insights and promotions. Join us today!</p>
+        <p class="mt-4 text-lg leading-8 text-gray-300">Join us today!</p>
+        <div class="mt-6 max-w-md gap-x-4">
+          <label for="email-address" class="sr-only">Name</label>
+          <input id="email-address" name="email" type="email" autocomplete="email" required class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" placeholder="Enter your name">          
+          <label for="email-address" class="sr-only">Email address</label>
+          <input id="email-address" name="email" type="email" autocomplete="email" required class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" placeholder="Enter your email">
+          <button type="submit" class="flex-none rounded-md bg-indigo-500 mt-3 px-5 py-2.5 text-sm font-semibold text-white shadow-sm" style="background-color:  rgb(31 41 55);transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='rgb(41, 52, 74)'" onmouseout="this.style.backgroundColor='rgb(31 41 55)'">Subscribe</button>
+        </div>
+      </div>
+      <dl class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2 animate__animated animate__fadeIn animate__slow">
+        <div class="flex flex-col items-center">
+          <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+            <i class='bx bx-news bx-border-square bx-burst bx-sm' style='color:#ffffff' ></i>
+            
+           
+          </div>
+          <dt class="mt-4 font-semibold text-white">Updates</dt>
+          <dd class="mt-2 justify-center leading-7 text-gray-400">Discover new releases and updates for our latest products. Stay in the loop with us!</dd>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+            <i class='bx bx-dollar bx-border-square bx-burst bx-sm' style='color:#ffffff'  ></i>
+            
+          </div>
+          <dt class="mt-4 font-semibold text-white">Discounts</dt>
+          <dd class="mt-2 justify-center leading-7 text-gray-400">Unlock exclusive deals and discounts. Don't miss out on our special promotions</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</div>
+
+<footer class="text-center text-lg-start text-black">
+  
+    <section class="">
+      <div class="container text-center text-md-start mt-0">
+        <!-- Grid row -->
+        <div class="row mt-2">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-5 mt-5">
+            <!-- Content -->
+            <h3 class=" font-bold tracking-tight text-black ">CoinSync</h3>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              Embark on a financial journey with CoinSync, your companion in smart money management. Seamlessly track expenses and chase your dreams, one coin at a time.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-5 mt-5">
+            <!-- Links -->
+            <h3 class="font-bold tracking-tight text-black ">Section</h3>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              <a href="index.html" class="text-black">Home</a>
+            </p>
+            <p>
+              <a href="aboutus.html" class="text-black">About Us</a>
+            </p>
+            <p>
+              <a href="pricing.html" class="text-black">Pricing</a>
+            </p>
+            <p>
+              <a href="logpage.html" class="text-black">Log In</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-5 mt-5">
+            <!-- Links -->
+            <h3 class="font-bold tracking-tight text-black ">Contact</h3>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #444444; height: 2px"
+                />
+            <p><i class="fas fa-home mr-3"></i> Hapugala,Galle Road,Sri Lanka</p>
+            <p><i class="fas fa-envelope mr-3"></i> coinsync@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> +94711234567</p>
+            <p><i class="fas fa-print mr-3"></i> +94771234567</p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-5 mt-5">
+            <!-- Links -->
+            <h3 class="font-bold tracking-tight text-black ">Follow us on</h3>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto"style="width: 60px; background-color: #7c4dff; height: 2px"/>
+            
+            <div class="body01">
+              <div class='social-links'>
+                  <li class="flex gap-x-3"><div class='social-btn flex-center' id="twitter" onclick="redirectTo('https://twitter.com')">
+                    <svg xmlns="http://www.twitter.com" width="24" height="24" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg><span>CoinSync</span>
+                  </div></li></div>
+                  <li class="flex gap-x-3"><div class='social-btn flex-center' id="linkedin" onclick="redirectTo('https://linkedin.com')">
+                    <svg xmlns="http://www.linkedin.com" width="24" height="24" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg><span>CoinSync</span>
+                  </div></li></div>
+                  <li class="flex gap-x-3"><div class='social-btn flex-center' id="github" onclick="redirectTo('https://github.com')">
+                    <svg xmlns="http://www.github.com" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg><span>CoinSync</span>
+                  </div></li></div>
+              </div>
+              <script>
+                function redirectTo(url) {
+                  window.open(url, '_blank');
+                }
+              </script>
+            </div>
+            
+          </div>
+          
+      </div>
+    </section>
+    <div class="text-center p-3 " style="background-color: rgba(0, 0, 0, 0.2); width: 100%;">
+      © 2023 Company,Inc. All rights reserverd.
+      <a class="text-black" href="https://coinsync.com/">CoinSync.com</a>
+    </div>
+</footer>
+
+ 
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <title>Modal Example</title>
+</head>
+<body class="bg-gray-200">
+  <style>
+    a{
+      text-decoration: none;
+    }
+  </style>
+  <!-- Your Modal Code -->
+  <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+    <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+          <!-- ... (your existing modal content) ... -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Your JavaScript to handle modal toggle -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const modal = document.querySelector('[aria-labelledby="modal-title"]');
+      const showModalButton = document.getElementById("showModalButton");
+      const closeModalButton = document.getElementById("closeModalButton");
+
+      showModalButton.addEventListener("click", function () {
+        modal.classList.add("opacity-100", "translate-y-0", "scale-100");
+        modal.classList.remove("opacity-0", "translate-y-4", "scale-95");
+      });
+
+      closeModalButton.addEventListener("click", function () {
+        modal.classList.remove("opacity-100", "translate-y-0", "scale-100");
+        modal.classList.add("opacity-0", "translate-y-4", "scale-95");
+      });
+    });
+  </script>
+</body>
+</html>
+
+</body>
+</html>
